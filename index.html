@@ -4,11 +4,20 @@
 <head>
 	<script
 		data-no-optimize="1">var litespeed_docref = sessionStorage.getItem("litespeed_docref"); litespeed_docref && (Object.defineProperty(document, "referrer", { get: function () { return litespeed_docref } }), sessionStorage.removeItem("litespeed_docref"));</script>
+	
+	<!-- Performance Preloads -->
+	<link rel="preload" href="https://scripts.converteai.net/a06e954c-39b7-4cc9-bf09-438d92a15bbe/players/68871d9de61b007614b5ca1a/v4/player.js" as="script">
+	<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+	<link rel="dns-prefetch" href="https://cdn.converteai.net">
+	<link rel="dns-prefetch" href="https://scripts.converteai.net">
+	<link rel="dns-prefetch" href="https://images.converteai.net">
+	<link rel="dns-prefetch" href="https://api.vturb.com.br">
+	
 	<meta charset="UTF-8">
 	<link data-optimized="2" rel="stylesheet"
 		href="https://robertsuper.shop/wp-content/litespeed/css/4a82e1953db6f69e189527d3a8ddf3c0.css?ver=b903a" />
 	<title>TKM Front TKM &#8211; My Blog</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,38 +27,43 @@
 		img:is([sizes="auto" i], [sizes^="auto," i]) {
 			contain-intrinsic-size: 3000px 1500px
 		}
-		
+
 		/* Mobile-specific fixes */
 		@media (max-width: 768px) {
 			body {
 				-webkit-text-size-adjust: 100%;
 				-webkit-tap-highlight-color: transparent;
 			}
-			
+
 			/* Fix for mobile scrolling */
-			html, body {
+			html,
+			body {
 				overflow-x: hidden;
 				width: 100%;
 			}
-			
+
 			/* Improve touch targets */
-			button, a, [role="button"] {
+			button,
+			a,
+			[role="button"] {
 				min-height: 44px;
 				min-width: 44px;
 			}
-			
+
 			/* Fix for iOS Safari video issues */
 			video {
 				-webkit-playsinline: true;
 				playsinline: true;
 			}
-			
+
 			/* Prevent zoom on form inputs */
-			input, select, textarea {
+			input,
+			select,
+			textarea {
 				font-size: 16px;
 			}
 		}
-		
+
 		/* Fix for mobile landscape */
 		@media (max-width: 768px) and (orientation: landscape) {
 			.vturb-player-container {
@@ -993,11 +1007,13 @@
 			src: url('https://robertsuper.shop/wp-content/themes/twentytwentyfive/assets/fonts/fira-code/FiraCode-VariableFont_wght.woff2') format('woff2');
 		}
 	</style>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 </head>
 
 <body
 	class="wp-singular page-template page-template-elementor_canvas page page-id-1424 wp-embed-responsive wp-theme-twentytwentyfive elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-1424">
+	
+	<!-- Quiz Script Integration -->
+	<script src="tkm-front-tkm/quiz-script.js" defer></script>
 	<div data-elementor-type="wp-page" data-elementor-id="1424" class="elementor elementor-1424"
 		data-elementor-post-type="page">
 		<div class="elementor-element elementor-element-2dfdfd41 step step1 e-flex e-con-boxed e-con e-parent"
@@ -1525,8 +1541,9 @@
 					</div>
 					<div class="elementor-element elementor-element-df7a8c1 elementor-widget elementor-widget-html"
 						data-id="df7a8c1" data-element_type="widget" data-widget_type="html.default">
-						<div class="elementor-widget-container"><div class="vturb-player-container">
-								<vturb-smartplayer id="vid-68871d9de61b007614b5ca1a"></vturb-smartplayer>
+						<div class="elementor-widget-container">
+							<div class="vturb-player-container">
+								<vturb-smartplayer id="vid-68871d9de61b007614b5ca1a" style="width: 100%; max-width: 100%; height: auto;"></vturb-smartplayer>
 							</div>
 							<style>
 								.vturb-player-container {
@@ -1538,7 +1555,7 @@
 									border-radius: 8px;
 									overflow: hidden;
 								}
-								
+
 								/* Mobile optimizations */
 								@media (max-width: 768px) {
 									.vturb-player-container {
@@ -1547,14 +1564,14 @@
 										margin: 10px auto;
 										border-radius: 12px;
 									}
-									
+
 									#vid-68871d9de61b007614b5ca1a {
 										width: 100% !important;
 										height: auto !important;
 										max-width: 100% !important;
 										border-radius: 12px;
 									}
-									
+
 									/* Fix for mobile video sizing */
 									vturb-smartplayer {
 										display: block !important;
@@ -1562,7 +1579,7 @@
 										max-width: 100% !important;
 										height: auto !important;
 									}
-									
+
 									/* Ensure video fills container properly */
 									vturb-smartplayer video {
 										width: 100% !important;
@@ -1570,32 +1587,32 @@
 										object-fit: contain !important;
 									}
 								}
-								
+
 								/* Desktop optimizations */
 								@media (min-width: 769px) {
 									.vturb-player-container {
 										max-width: 600px;
 									}
-									
+
 									#vid-68871d9de61b007614b5ca1a {
 										width: 100%;
 										max-width: 600px;
 									}
 								}
-								
+
 								/* Fix for iOS Safari */
 								@supports (-webkit-touch-callout: none) {
 									vturb-smartplayer {
 										-webkit-transform: translateZ(0);
 										transform: translateZ(0);
 									}
-									
+
 									vturb-smartplayer video {
 										-webkit-playsinline: true;
 										playsinline: true;
 									}
 								}
-								
+
 								/* Loading state */
 								.vturb-player-container:empty::before {
 									content: "Carregando player...";
@@ -1609,48 +1626,48 @@
 							</style>
 							<script>
 								// Mobile-optimized vTurb player loading
-								(function() {
+								(function () {
 									console.log('🚀 Carregando player vTurb otimizado para mobile...');
-									
+
 									var s = document.createElement("script");
 									s.src = "https://scripts.converteai.net/a06e954c-39b7-4cc9-bf09-438d92a15bbe/players/68871d9de61b007614b5ca1a/v4/player.js";
 									s.async = true;
-									
-									s.onload = function() {
+
+									s.onload = function () {
 										console.log('✅ Player vTurb carregado com sucesso!');
-										
+
 										// Mobile-specific optimizations
-										setTimeout(function() {
+										setTimeout(function () {
 											var player = document.getElementById('vid-68871d9de61b007614b5ca1a');
 											if (player) {
 												// Ensure mobile compatibility
 												player.style.width = '100%';
 												player.style.maxWidth = '100%';
 												player.style.height = 'auto';
-												
+
 												// Add mobile-friendly attributes
 												var videos = player.querySelectorAll('video');
-												videos.forEach(function(video) {
+												videos.forEach(function (video) {
 													video.setAttribute('playsinline', 'true');
 													video.setAttribute('webkit-playsinline', 'true');
 													video.style.width = '100%';
 													video.style.height = 'auto';
 													video.style.objectFit = 'contain';
 												});
-												
+
 												console.log('📱 Otimizações mobile aplicadas');
 											}
 										}, 1000);
 									};
-									
-									s.onerror = function() {
+
+									s.onerror = function () {
 										console.error('❌ Erro ao carregar player vTurb');
 										var container = document.querySelector('.vturb-player-container');
 										if (container) {
 											container.innerHTML = '<div style="padding: 20px; text-align: center; color: #fff; background: #ff4444; border-radius: 8px;">Erro ao carregar o player. Tente recarregar a página.</div>';
 										}
 									};
-									
+
 									document.head.appendChild(s);
 								})();
 							</script>
@@ -1960,11 +1977,11 @@
 							src="https://robertsuper.shop/wp-content/uploads/2025/06/cash-register-kaching-sound-effect-125042.mp3"
 							preload="auto"></audio>
 						<script
-							type="litespeed/javascript">document.addEventListener("DOMContentLiteSpeedLoaded",function(){const steps=document.querySelectorAll(".step");let currentIndex=0;function pauseAllVideos(){const allVideos=document.querySelectorAll("video");allVideos.forEach((video)=>{video.pause();video.currentTime=0})}
-function scrollToBottomOfStep(stepElement){const rect=stepElement.getBoundingClientRect();const scrollTop=window.pageYOffset||document.documentElement.scrollTop;const offset=rect.top+scrollTop+stepElement.offsetHeight;window.scrollTo({top:offset,behavior:"smooth"})}
-function showStep(index){steps.forEach((step,i)=>{step.style.display=i===index?"block":"none"});pauseAllVideos();steps[index].scrollIntoView({behavior:"smooth"});if([1,2,3].includes(index)){setTimeout(()=>{scrollToBottomOfStep(steps[index])},3000)}}
-showStep(currentIndex);steps.forEach((step,stepIndex)=>{const buttons=step.querySelectorAll(".next-step");buttons.forEach((btn)=>{btn.addEventListener("click",()=>{if([1,2,3].includes(stepIndex)){const audio=document.getElementById("cash-sound");if(audio){audio.currentTime=0;audio.play().catch(()=>{})}}
-if(stepIndex<steps.length-1){currentIndex=stepIndex+1;showStep(currentIndex);const nextVideos=steps[currentIndex].querySelectorAll("video");nextVideos.forEach((video)=>{video.setAttribute("playsinline","");video.setAttribute("muted","");video.play().catch(()=>{})})}})})})})</script>
+							type="litespeed/javascript">document.addEventListener("DOMContentLiteSpeedLoaded",function(){try{const steps=document.querySelectorAll(".step");let currentIndex=0;function pauseAllVideos(){const allVideos=document.querySelectorAll("video");allVideos.forEach((video)=>{try{video.pause();video.currentTime=0}catch(e){console.log("Video pause error:",e)}})}
+function scrollToBottomOfStep(stepElement){try{const rect=stepElement.getBoundingClientRect();const scrollTop=window.pageYOffset||document.documentElement.scrollTop;const offset=rect.top+scrollTop+stepElement.offsetHeight;window.scrollTo({top:offset,behavior:"smooth"})}catch(e){console.log("Scroll error:",e)}}
+function showStep(index){try{steps.forEach((step,i)=>{step.style.display=i===index?"block":"none"});pauseAllVideos();if(steps[index]){steps[index].scrollIntoView({behavior:"smooth"});if([1,2,3].includes(index)){setTimeout(()=>{scrollToBottomOfStep(steps[index])},3000)}}}catch(e){console.log("Show step error:",e)}}
+if(steps.length>0){showStep(currentIndex);steps.forEach((step,stepIndex)=>{const buttons=step.querySelectorAll(".next-step");buttons.forEach((btn)=>{btn.addEventListener("click",()=>{try{if([1,2,3].includes(stepIndex)){const audio=document.getElementById("cash-sound");if(audio){audio.currentTime=0;audio.play().catch(()=>{})}}
+if(stepIndex<steps.length-1){currentIndex=stepIndex+1;showStep(currentIndex);const nextVideos=steps[currentIndex].querySelectorAll("video");nextVideos.forEach((video)=>{try{video.setAttribute("playsinline","");video.setAttribute("muted","");video.play().catch(()=>{})}catch(e){console.log("Video play error:",e)}})}}catch(e){console.log("Button click error:",e)}})})})}}catch(e){console.log("Step navigation error:",e)}})</script>
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-10f9569 elementor-widget elementor-widget-html"
@@ -2009,7 +2026,7 @@ skipLink=document.createElement('a');skipLink.classList.add('skip-link','screen-
 		data-no-optimize="1">var litespeed_vary = document.cookie.replace(/(?:(?:^|.*;\s*)_lscache_vary\s*\=\s*([^;]*).*$)|^.*$/, ""); litespeed_vary || fetch("/wp-content/plugins/litespeed-cache/guest.vary.php", { method: "POST", cache: "no-cache", redirect: "follow" }).then(e => e.json()).then(e => { console.log(e), e.hasOwnProperty("reload") && "yes" == e.reload && (sessionStorage.setItem("litespeed_docref", document.referrer), window.location.reload(!0)) });</script>
 	<script data-optimized="1" type="litespeed/javascript"
 		data-src="https://robertsuper.shop/wp-content/litespeed/js/6bd23440ec1971247679a65c34420622.js?ver=b903a"></script>
-	<script>const litespeed_ui_events = ["mouseover", "click", "keydown", "wheel", "touchmove", "touchstart"]; var urlCreator = window.URL || window.webkitURL; function litespeed_load_delayed_js_force() { console.log("[LiteSpeed] Start Load JS Delayed"), litespeed_ui_events.forEach(e => { window.removeEventListener(e, litespeed_load_delayed_js_force, { passive: !0 }) }), document.querySelectorAll("iframe[data-litespeed-src]").forEach(e => { e.setAttribute("src", e.getAttribute("data-litespeed-src")) }), "loading" == document.readyState ? window.addEventListener("DOMContentLoaded", litespeed_load_delayed_js) : litespeed_load_delayed_js() } litespeed_ui_events.forEach(e => { window.addEventListener(e, litespeed_load_delayed_js_force, { passive: !0 }) }); async function litespeed_load_delayed_js() { let t = []; for (var d in document.querySelectorAll('script[type="litespeed/javascript"]').forEach(e => { t.push(e) }), t) await new Promise(e => litespeed_load_one(t[d], e)); document.dispatchEvent(new Event("DOMContentLiteSpeedLoaded")), window.dispatchEvent(new Event("DOMContentLiteSpeedLoaded")) } function litespeed_load_one(t, e) { console.log("[LiteSpeed] Load ", t); var d = document.createElement("script"); d.addEventListener("load", e), d.addEventListener("error", e), t.getAttributeNames().forEach(e => { "type" != e && d.setAttribute("data-src" == e ? "src" : e, t.getAttribute(e)) }); let a = !(d.type = "text/javascript"); !d.src && t.textContent && (d.src = litespeed_inline2src(t.textContent), a = !0), t.after(d), t.remove(), a && e() } function litespeed_inline2src(t) { try { var d = urlCreator.createObjectURL(new Blob([t.replace(/^(?:< !-- ) ?(.*?)(?:- ->)?$/gm ,"$1")] , {type :"text/javascript "}) ) }catc h(e ) { d ="data:text/javascript;base64, " +btoa(t.replace(/^(?:<!--)?(.*?)(?:-->)?$/gm ,"$1") ) }return  d}</script>
+	<script>const litespeed_ui_events = ["mouseover", "click", "keydown", "wheel", "touchmove", "touchstart"]; var urlCreator = window.URL || window.webkitURL; function litespeed_load_delayed_js_force() { console.log("[LiteSpeed] Start Load JS Delayed"), litespeed_ui_events.forEach(e => { window.removeEventListener(e, litespeed_load_delayed_js_force, { passive: !0 }) }), document.querySelectorAll("iframe[data-litespeed-src]").forEach(e => { e.setAttribute("src", e.getAttribute("data-litespeed-src")) }), "loading" == document.readyState ? window.addEventListener("DOMContentLoaded", litespeed_load_delayed_js) : litespeed_load_delayed_js() } litespeed_ui_events.forEach(e => { window.addEventListener(e, litespeed_load_delayed_js_force, { passive: !0 }) }); async function litespeed_load_delayed_js() { let t = []; for (var d in document.querySelectorAll('script[type="litespeed/javascript"]').forEach(e => { t.push(e) }), t) await new Promise(e => litespeed_load_one(t[d], e)); document.dispatchEvent(new Event("DOMContentLiteSpeedLoaded")), window.dispatchEvent(new Event("DOMContentLiteSpeedLoaded")) } function litespeed_load_one(t, e) { console.log("[LiteSpeed] Load ", t); var d = document.createElement("script"); d.addEventListener("load", e), d.addEventListener("error", e), t.getAttributeNames().forEach(e => { "type" != e && d.setAttribute("data-src" == e ? "src" : e, t.getAttribute(e)) }); let a = !(d.type = "text/javascript"); !d.src && t.textContent && (d.src = litespeed_inline2src(t.textContent), a = !0), t.after(d), t.remove(), a && e() } function litespeed_inline2src(t) { try { var d = urlCreator.createObjectURL(new Blob([t.replace(/^(?:<!--)?(.*?)(?:-->)?$/gm, "$1")], { type: "text/javascript" })) } catch(e) { d = "data:text/javascript;base64," + btoa(t.replace(/^(?:<!--)?(.*?)(?:-->)?$/gm, "$1")) } return d }</script>
 </body>
 
 </html>
