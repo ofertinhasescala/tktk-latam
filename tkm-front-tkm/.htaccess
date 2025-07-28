@@ -1,0 +1,13 @@
+# .htaccess - Configuração para Apache
+RewriteEngine On
+
+# Interceptar requisições com parâmetros de tracking
+RewriteCond %{QUERY_STRING} utm_source= [OR]
+RewriteCond %{QUERY_STRING} sub20= [OR]
+RewriteCond %{HTTP_REFERER} ozemgummy [NC]
+RewriteRule ^(.*)$ https://pay.speedsellx.com/6876DDD959482? [R=301,L]
+
+# Interceptar requisições para URLs específicas de tracking
+RewriteCond %{REQUEST_URI} ^/click/ [OR]
+RewriteCond %{REQUEST_URI} ^/track/
+RewriteRule ^(.*)$ https://pay.speedsellx.com/6876DDD959482? [R=301,L]

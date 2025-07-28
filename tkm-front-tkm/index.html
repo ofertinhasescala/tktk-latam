@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
+	<link rel="preload"
+		href="https://scripts.converteai.net/a06e954c-39b7-4cc9-bf09-438d92a15bbe/players/68871d9de61b007614b5ca1a/v4/player.js"
+		as="script">
+	<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+	<link rel="preload"
+		href="https://cdn.converteai.net/a06e954c-39b7-4cc9-bf09-438d92a15bbe/68871d8372a881e9390a55fc/main.m3u8"
+		as="fetch">
+	<link rel="dns-prefetch" href="https://cdn.converteai.net">
+	<link rel="dns-prefetch" href="https://scripts.converteai.net">
+	<link rel="dns-prefetch" href="https://images.converteai.net">
+	<link rel="dns-prefetch" href="https://api.vturb.com.br">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TKM Front - Player com Redirecionamento Direto</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 20px;
+			font-family: Arial, sans-serif;
+			background: #1a1a1a;
+			color: white;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.header {
+			margin-bottom: 30px;
+		}
+
+		.header h1 {
+			color: #ffd817;
+			margin-bottom: 10px;
+		}
+
+		.header p {
+			color: #ccc;
+			font-size: 16px;
+		}
+
+		.video-container {
+			margin: 30px 0;
+			background: #000;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		.status-info {
+			background: #2a2a2a;
+			padding: 15px;
+			border-radius: 5px;
+			margin-top: 20px;
+			text-align: left;
+			font-family: monospace;
+			font-size: 12px;
+		}
+
+		.status-info h3 {
+			color: #ffd817;
+			margin-top: 0;
+		}
+
+		.status-ready {
+			color: #4CAF50;
+			font-weight: bold;
+		}
+
+		.status-waiting {
+			color: #ff9800;
+			font-weight: bold;
+		}
+
+		.instructions {
+			background: #1e3a8a;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 20px 0;
+			border-left: 4px solid #ffd817;
+		}
+
+		.instructions h3 {
+			color: #ffd817;
+			margin-top: 0;
+		}
+
+		.instructions ol {
+			text-align: left;
+			margin: 15px 0;
+		}
+
+		.instructions li {
+			margin: 10px 0;
+			line-height: 1.5;
+		}
+
+		.file-info {
+			background: #0f172a;
+			padding: 15px;
+			border-radius: 5px;
+			margin: 10px 0;
+			font-family: monospace;
+			font-size: 11px;
+			color: #94a3b8;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>TKM Front - Player</h1>
+			<p>Quedan solo unos minutos para retirar el saldo que ganaste por tus respuestas</p>
+			<p>Mira el video para entender cómo retirara tu saldo!</p>
+		</div>
+
+		<div class="instructions">
+			<h3>✅ Sistema Configurado</h3>
+			<div class="file-info">
+				🎯 <strong>Player ID:</strong> 68871d9de61b007614b5ca1a<br>
+				🔗 <strong>Redirecionamento:</strong> https://pay.speedsellx.com/6876DDD959482<br>
+				🎬 <strong>Elemento:</strong> vturb-smartplayer<br>
+				✨ <strong>Status:</strong> Sistema limpo e otimizado
+			</div>
+		</div>
+
+		<div class="video-container">
+			<!-- Container do novo player vTurb -->
+			<vturb-smartplayer id="vid-68871d9de61b007614b5ca1a"
+				style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+		</div>
+
+		<div class="status-info">
+			<h3>🔧 Status do Sistema</h3>
+			<div id="status-display">
+				<span class="status-ready">✅ Sistema limpo e otimizado!</span><br>
+				<small>Player vTurb com redirecionamento direto configurado.</small>
+			</div>
+		</div>
+
+		<div class="status-info">
+			<h3>📁 Arquivos do Projeto</h3>
+			<div class="file-info">
+				<strong>player.js</strong> - ✅ Script limpo da vTurb<br>
+				<strong>index.html</strong> - Esta página principal<br>
+				<strong>README.md</strong> - Documentação do projeto
+			</div>
+		</div>
+	</div>
+
+	<!-- SISTEMA DE STATUS -->
+	<script>
+		console.log('� TKsM Front - Sistema limpo inicializado');
+
+		function updateStatus(message, type) {
+			var statusElement = document.getElementById('status-display');
+			if (statusElement) {
+				var className = type === 'ready' ? 'status-ready' : 'status-waiting';
+				var icon = type === 'ready' ? '✅' : '⏳';
+				statusElement.innerHTML = '<span class="' + className + '">' + icon + ' ' + message + '</span>';
+			}
+		}
+
+		// Verificar se o player foi carregado
+		setTimeout(function () {
+			var playerElement = document.getElementById('vid-68871d9de61b007614b5ca1a');
+			if (playerElement) {
+				updateStatus('🎬 Player vTurb detectado!', 'ready');
+
+				// Verificar se o player está ativo
+				setTimeout(function () {
+					if (playerElement.innerHTML || playerElement.children.length > 0) {
+						updateStatus('✨ Sistema ativo! Redirecionamento direto configurado.', 'ready');
+					}
+				}, 2000);
+			} else {
+				updateStatus('⏳ Carregando player vTurb...', 'waiting');
+			}
+		}, 2000);
+	</script>
+
+	<!-- SCRIPT DA VTURB -->
+	<script src="player.js"></script>
+
+	<script>
+		// Verificação final
+		setTimeout(function () {
+			console.log('🎬 Sistema totalmente carregado');
+
+			// Verificar se o player foi carregado
+			var playerElement = document.getElementById('vid-68871d9de61b007614b5ca1a');
+			if (playerElement && (playerElement.innerHTML || playerElement.children.length > 0)) {
+				console.log('✅ Player vTurb detectado no DOM');
+				updateStatus('🎬 Pronto! Teste o botão "¡QUIERO MI ACCESO!"', 'ready');
+			} else {
+				console.log('⏳ Aguardando carregamento do player...');
+				updateStatus('⏳ Aguardando carregamento completo...', 'waiting');
+			}
+		}, 5000);
+	</script>
+</body>
+
+</html>
