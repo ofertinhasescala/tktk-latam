@@ -1543,7 +1543,7 @@
 						data-id="df7a8c1" data-element_type="widget" data-widget_type="html.default">
 						<div class="elementor-widget-container">
 							<div class="vturb-player-container">
-								<vturb-smartplayer id="vid-68871d9de61b007614b5ca1a" style="width: 100%; max-width: 100%; height: auto;"></vturb-smartplayer>
+								<vturb-smartplayer id="vid-68871d9de61b007614b5ca1a" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
 							</div>
 							<style>
 								.vturb-player-container {
@@ -1741,81 +1741,9 @@
 									setTimeout(fixMobileLayout, 2000);
 									setTimeout(fixMobileLayout, 3000);
 									
-									var s = document.createElement("script");
-									s.src = "https://scripts.converteai.net/a06e954c-39b7-4cc9-bf09-438d92a15bbe/players/68871d9de61b007614b5ca1a/v4/player.js";
-									s.async = true;
-
-									s.onload = function () {
-										console.log('✅ Player vTurb carregado com sucesso!');
-
-																						// Mobile-specific optimizations
-										setTimeout(function () {
-											var player = document.getElementById('vid-68871d9de61b007614b5ca1a');
-											if (player) {
-												// Ensure mobile compatibility
-												player.style.width = '100%';
-												player.style.maxWidth = '100%';
-												player.style.height = 'auto';
-												
-												// Fix for mobile view
-												if (window.innerWidth <= 768) {
-													player.style.minHeight = '280px';
-													player.style.marginBottom = '30px';
-													
-													// Garantir espaço para o botão abaixo do vídeo
-													var actionButton = document.querySelector('.elementor-element-2d14e2ff');
-													if (actionButton) {
-														actionButton.style.marginTop = '40px';
-														actionButton.style.position = 'relative';
-														actionButton.style.zIndex = '10';
-														actionButton.style.clear = 'both';
-														
-														// Ajustar o estilo do botão para melhorar visibilidade
-														var buttonElement = actionButton.querySelector('.elementor-button');
-														if (buttonElement) {
-															buttonElement.style.padding = '15px';
-															buttonElement.style.fontSize = '18px';
-															buttonElement.style.marginTop = '10px';
-														}
-													}
-													
-													// Fix comments position
-													var commentsSection = document.querySelector('.elementor-element-5dac4e2');
-													if (commentsSection) {
-														commentsSection.style.marginTop = '320px';
-														commentsSection.style.position = 'relative';
-														commentsSection.style.zIndex = '1';
-													}
-												}
-
-												// Add mobile-friendly attributes
-												var videos = player.querySelectorAll('video');
-												videos.forEach(function (video) {
-													video.setAttribute('playsinline', 'true');
-													video.setAttribute('webkit-playsinline', 'true');
-													video.style.width = '100%';
-													video.style.height = 'auto';
-													video.style.objectFit = 'contain';
-													
-													if (window.innerWidth <= 768) {
-														video.style.minHeight = '250px';
-													}
-												});
-
-												console.log('📱 Otimizações mobile aplicadas');
-											}
-										}, 1000);
-									};
-
-									s.onerror = function () {
-										console.error('❌ Erro ao carregar player vTurb');
-										var container = document.querySelector('.vturb-player-container');
-										if (container) {
-											container.innerHTML = '<div style="padding: 20px; text-align: center; color: #fff; background: #ff4444; border-radius: 8px;">Erro ao carregar o player. Tente recarregar a página.</div>';
-										}
-									};
-
-									document.head.appendChild(s);
+									var s=document.createElement("script"); 
+									s.src="https://scripts.converteai.net/a06e954c-39b7-4cc9-bf09-438d92a15bbe/players/68871d9de61b007614b5ca1a/v4/player.js", 
+									s.async=!0,document.head.appendChild(s);
 								})();
 							</script>
 							<style>
